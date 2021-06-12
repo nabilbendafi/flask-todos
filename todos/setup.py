@@ -14,8 +14,9 @@ setup(
     include_package_data=True,
     install_requires=[
         'flask',
+        'flask_sqlalchemy',
+        'flasgger',
         'setuptools',
-        'flasgger'
     ],
     extras_require={
         'test': [
