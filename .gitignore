@@ -1,0 +1,8 @@
+## Python
+*.pyc
+.pytest_cache/
+env/
+*.egg-info/
+.coverage
+dist/
+build/
