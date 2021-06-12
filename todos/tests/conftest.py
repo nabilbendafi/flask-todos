@@ -3,6 +3,7 @@ import pytest
 
 from src.todos import create_app
 
+
 @pytest.fixture(scope='session')
 def client(request):
     app = create_app()
@@ -20,6 +21,7 @@ def client(request):
 
     test_client = app.test_client()
     return test_client
+
 
 @pytest.fixture
 def runner(app):
