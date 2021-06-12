@@ -1,5 +1,10 @@
 <p>TODO list!</p>
 
+<ul>
+{% for todo in todos %}
+  <li>{{todo}}</li>
+{% endfor %}
+</ul>
 <form method="post">
   <p><input type=text name="todo"></p>
   <p><input type=submit value="Add todo"></p>

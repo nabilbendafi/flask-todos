@@ -3,12 +3,16 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+todo_list = []
+
+def get_todo_list():
+    return todo_list
+
 @app.route('/', methods=['GET', 'POST'])
 def todos():
     if request.method == 'POST':
-        app.logger.debug(request)
-        app.logger.debug(request.form)
-    return render_template('base.html')
+        todo_list.append(request.form['todo'])
+    return render_template('base.html', todos=get_todo_list())
 
 def create_app(test_config=None):
     return app
