@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.0.4]
+- Add database
+
 ## [0.0.3]
 - Add todo list
 
