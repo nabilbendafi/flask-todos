@@ -5,6 +5,7 @@ COPY . /todos
 
 RUN apk update \
     && apk add --virtual build-deps build-base gcc python3-dev musl-dev \
+    && apk add postgresql-dev \
     && rm -rf /var/cache/apk/*
 
 RUN pip install -e .

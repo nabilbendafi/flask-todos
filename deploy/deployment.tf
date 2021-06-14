@@ -25,8 +25,18 @@ resource "kubernetes_deployment" "flask" {
 
       spec {
         container {
+          name  = "flask"
           image = var.docker_image
-          name  = "todos"
+
+          env {
+            name  = "DATABASE_URI"
+            value = "postgresql://flask:$POSTGRES_APP_PASSWORD@postgresql.todos.svc.cluster.local/todos"
+          }
+          env_from {
+            secret_ref {
+              name = "flask"
+            }
+          }
         }
       }
     }

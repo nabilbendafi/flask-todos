@@ -16,6 +16,7 @@ setup(
         'flask',
         'flask_sqlalchemy',
         'flasgger',
+        'psycopg2',
         'setuptools',
     ],
     extras_require={
