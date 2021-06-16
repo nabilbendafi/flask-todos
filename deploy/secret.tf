@@ -20,3 +20,15 @@ resource "kubernetes_secret" "flask" {
     POSTGRES_APP_PASSWORD = var.db_application_password
   }
 }
+
+resource "kubernetes_secret" "tls-ssl" {
+  metadata {
+    name      = "tls-ssl"
+    namespace = "todos"
+  }
+
+  data = {
+    "tls.crt" = file("${path.module}/files/server.crt")
+    "tls.key" = file("${path.module}/files/server.key")
+  }
+}

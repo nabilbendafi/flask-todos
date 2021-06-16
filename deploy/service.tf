@@ -2,6 +2,10 @@ resource "kubernetes_service" "flask" {
   metadata {
     name      = "flask"
     namespace = "todos"
+
+    annotations = {
+      "cloud.google.com/app-protocols":  '{"http":"HTTP"}'
+    }
   }
 
   spec {
@@ -10,6 +14,7 @@ resource "kubernetes_service" "flask" {
     }
 
     port {
+      name        = "http"
       port        = 80
       target_port = 5000
     }

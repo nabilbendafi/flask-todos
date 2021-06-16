@@ -32,3 +32,6 @@ pip install -e ".[test]"
 python -m pytest
 coverage run -m pytest
 ```
+
+# TODO
+ - Move to production ready server

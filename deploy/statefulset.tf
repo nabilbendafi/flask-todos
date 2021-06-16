@@ -1,4 +1,6 @@
 resource "kubernetes_stateful_set" "postgresql" {
+  depends_on = [kubernetes_service.postgresql]
+
   metadata {
     name      = "postgresql"
     namespace = "todos"
