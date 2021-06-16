@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "flask" {
 
           env {
             name  = "DATABASE_URI"
-            value = "postgresql://flask:$POSTGRES_APP_PASSWORD@postgresql.todos.svc.cluster.local/todos"
+            value = "postgresql://flask:$(POSTGRES_APP_PASSWORD)@postgresql.todos.svc.cluster.local/todos"
           }
           env_from {
             secret_ref {
