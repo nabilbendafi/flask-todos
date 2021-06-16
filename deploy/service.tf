@@ -28,5 +28,8 @@ resource "kubernetes_service" "postgresql" {
     selector = {
       app = "postgresql"
     }
+    port {
+      port = 5432
+    }
   }
 }
