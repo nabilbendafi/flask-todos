@@ -14,7 +14,7 @@ resource "kubernetes_service" "flask" {
       target_port = 5000
     }
 
-    type = "LoadBalancer"
+    type = "NodePort"
   }
 }
 

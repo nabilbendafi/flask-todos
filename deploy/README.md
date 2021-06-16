@@ -25,3 +25,8 @@ terraform apply
 ```
 
 > __Node__: No remote tfstate storage is enabled
+
+
+# TODO
+ - Externalise secret (Secret manager)
+ - HTTPS with managed TLS certificates for own domain
