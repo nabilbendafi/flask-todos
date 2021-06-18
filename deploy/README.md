@@ -13,7 +13,7 @@ gcloud auth login
 Push image to Google Cloud Platform Artifact Registry
 ```
 docker tag flask-todos gcr.io/<project_id>/flask-todos
-docker push flask-todos gcr.io/<project_id>/flask-todos
+docker push gcr.io/<project_id>/flask-todos
 ```
 
 # Config file generation
