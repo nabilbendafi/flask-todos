@@ -34,7 +34,7 @@ terraform apply
 
 
 # TODO
- - Persistent DB storage
+ - ~~Persistent DB storage~~
  - Externalise secret (Secret manager)
  - HTTPS with managed TLS certificates for own domain
  - End-to-end HTTPS
