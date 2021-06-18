@@ -5,8 +5,9 @@ resource "kubernetes_secret" "postgresql" {
   }
 
   data = {
-    POSTGRES_PASSWORD     = var.db_password
-    POSTGRES_APP_PASSWORD = var.db_application_password
+    POSTGRES_PASSWORD             = var.db_password
+    POSTGRES_REPLICATION_PASSWORD = var.db_replication_password
+    POSTGRES_APP_PASSWORD         = var.db_application_password
   }
 }
 

@@ -16,6 +16,12 @@ docker tag flask-todos gcr.io/<project_id>/flask-todos
 docker push flask-todos gcr.io/<project_id>/flask-todos
 ```
 
+# Config file generation
+
+Based on _Helm_ chart [postgresql](https://github.com/helm/charts/tree/master/stable/postgresql).
+Generated configuration file (with adapted `values.yaml`) is then [kfilt](https://github.com/ryane/kfilt)-ered by resource type and then [k2tf](https://github.com/sl1pm4t/k2tf)-ed.
+Manually adjustment are them done to match our need.
+
 # Deploy Kubernetes resources
 
 ```bash
@@ -28,6 +34,7 @@ terraform apply
 
 
 # TODO
+ - Persistent DB storage
  - Externalise secret (Secret manager)
  - HTTPS with managed TLS certificates for own domain
  - End-to-end HTTPS

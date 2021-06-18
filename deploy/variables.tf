@@ -7,6 +7,10 @@ variable "db_password" {
   description = "PostgreSQL superuser password"
 }
 
+variable "db_replication_password" {
+  description = "PostgreSQL replication user password"
+}
+
 variable "db_application_password" {
   description = "PostgreSQL Flask application password"
 }
