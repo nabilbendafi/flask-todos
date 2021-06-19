@@ -66,7 +66,7 @@ resource "kubernetes_stateful_set" "postgresql_read" {
 
           env {
             name  = "POSTGRESQL_VOLUME_DIR"
-            value = "/var/lib/postgresql"
+            value = "/bitnami/postgresql"
           }
 
           env {
@@ -76,7 +76,7 @@ resource "kubernetes_stateful_set" "postgresql_read" {
 
           env {
             name  = "PGDATA"
-            value = "/var/lib/postgresql/data"
+            value = "/bitnami/postgresql/data"
           }
 
           env {
@@ -153,7 +153,7 @@ resource "kubernetes_stateful_set" "postgresql_read" {
 
           volume_mount {
             name       = "data"
-            mount_path = "/var/lib/postgresql"
+            mount_path = "/bitnami/postgresql"
           }
 
           liveness_probe {
@@ -319,12 +319,12 @@ resource "kubernetes_stateful_set" "postgresql_primary" {
 
           env {
             name  = "POSTGRESQL_VOLUME_DIR"
-            value = "/var/lib/postgresql"
+            value = "/bitnami/postgresql"
           }
 
           env {
             name  = "PGDATA"
-            value = "/var/lib/postgresql/data"
+            value = "/bitnami/postgresql/data"
           }
 
           env {
@@ -406,7 +406,7 @@ resource "kubernetes_stateful_set" "postgresql_primary" {
 
           volume_mount {
             name       = "data"
-            mount_path = "/var/lib/postgresql"
+            mount_path = "/bitnami/postgresql"
           }
 
           liveness_probe {
